@@ -1,10 +1,18 @@
 {
-  "name": "LocalPhotoViewer",
-  "version": "0.01",
-  "manifest_version": 2,
-  "description": "photo viewer for local files",
-  "content_scripts": [{
-    "matches": ["file:///*"],
-    "js": ["script.js"]
-  }]
+    "name": "LocalPhotoViewer",
+    "version": "0.01",
+    "manifest_version": 2,
+    "description": "next/prev button, wheel scaling for viewing photos in local files",
+    "content_scripts": [{
+        "matches": ["file:///*"],
+        "js": ["script.js"]
+    }],
+    /*
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    */
+    "options_page": "options.html",
+    "permissions": [ "tabs" ]
 }
